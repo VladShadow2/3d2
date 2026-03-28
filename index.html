@@ -1,40 +1,111 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Моя 360 кімната</title>
+<head>
+<meta charset="UTF-8">
+<title>Street View Style</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"
-    />
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
 
-    <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
 
-    <style>
-      html,
-      body {
-        margin: 0;
-        height: 100%;
-      }
+<style>
+html, body {
+margin:0;
+height:100%;
+}
 
-      #panorama {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
+#panorama {
+width:100%;
+height:100%;
+}
 
-  <body>
-    <div id="panorama"></div>
+/* 🔥 ПЛАТФОРМА (круг знизу) */
+.ground-arrow {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background: rgba(0,0,0,0.4);
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.3s;
+}
 
-    <script>
-      pannellum.viewer("panorama", {
-        type: "equirectangular",
-        panorama: "Dick.jpg",
-        autoLoad: true,
-        showZoomCtrl: true,
-      });
-    </script>
-  </body>
+/* 🔥 СТРІЛКА */
+.ground-arrow::after {
+content: "";
+width: 0;
+height: 0;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+border-top: 25px solid white;
+}
+
+/* hover ефект */
+.ground-arrow:hover {
+transform: scale(1.2);
+background: rgba(255,255,255,0.3);
+cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="panorama"></div>
+
+<script>
+
+const viewer = pannellum.viewer('panorama', {
+
+default: {
+    firstScene: 'room1',
+    sceneFadeDuration: 1200,
+    autoLoad: true
+},
+
+scenes: {
+
+    room1: {
+        type: 'equirectangular',
+        panorama: 'Dick.jpg',
+
+        hotSpots: [
+            {
+                pitch: -32.88973664368493,   // 🔥 вниз (на підлогу)
+                yaw: -111.83523185868906,       // вперед
+                type: 'custom',
+                cssClass: 'ground-arrow',
+                clickHandlerFunc: () => viewer.loadScene('room2')
+            }
+        ]
+    },
+
+    room2: {
+        type: 'equirectangular',
+        panorama: 'my_room.jpg',
+
+        hotSpots: [
+            {
+                pitch: -32.836821385260095,
+                yaw: 54.26158643391171,
+                type: 'custom',
+                cssClass: 'ground-arrow',
+                clickHandlerFunc: () => viewer.loadScene('room1')
+            }
+        ]
+    }
+
+}
+
+});
+viewer.on('mousedown', function (e) {
+    const coords = viewer.mouseEventToCoords(e);
+    console.log('pitch:', coords[0], 'yaw:', coords[1]);
+});
+</script>
+
+</body>
 </html>
