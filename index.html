@@ -34,8 +34,7 @@
         transition: 0.3s;
         transform: translate(-50%, -50%) rotateX(60deg);
         transition: 0.3s;
-}
-      
+      }
 
       .ground-arrow::after {
         content: "";
@@ -55,9 +54,8 @@
   </head>
 
   <body>
-   
     <div id="panorama"></div>
-    
+
     <script>
       const viewer = pannellum.viewer("panorama", {
         default: {
@@ -92,6 +90,68 @@
             ],
           },
 
+          myclass_y: {
+            type: "equirectangular",
+            panorama: "school/myclass_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -22.528079312706335,
+                yaw: -58.72832670795617,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecruloonepoverhcoridor_y"),
+              },
+            ],
+          },
+          onepowerlivecruloclassnextwidnahogo_y: {
+            type: "equirectangular",
+            panorama: "school/onepowerlivecruloclassnextwidnahogo_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -17.005994842040298,
+                yaw: -98.22655875122132,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecruloonepoverhcoridor_y"),
+              },
+            ],
+          },
+          livecrulothreeclass_y: {
+            type: "equirectangular",
+            panorama: "school/livecrulothreeclass_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -25.339228900512545,
+                yaw: 42.91251245355595,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecruloonepoverhcoridor_y"),
+              },
+            ],
+          },
+
+          livecruloclassone_y: {
+            type: "equirectangular",
+            panorama: "school/livecruloclassone_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -30.093191993913873,
+                yaw: -23.23302269393561,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecruloonepoverhcoridor_y"),
+              },
+            ],
+          },
+
           livecruloonepoverhcoridor_y: {
             type: "equirectangular",
             panorama: "school/livecruloonepoverhcoridor_y.jpg",
@@ -104,8 +164,270 @@
                 cssClass: "ground-arrow",
                 clickHandlerFunc: () => viewer.loadScene("vulucia_y"),
               },
+
+              {
+                pitch: -35.421413707987206,
+                yaw: -45.870041282501624,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("myclass_y"),
+              },
+              {
+                pitch: -39.44201573162725,
+                yaw: 33.86418296336897,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("onepowerlivecruloclassnextwidnahogo_y"),
+              },
+              {
+                pitch: -44.235296452602924,
+                yaw: 138.7276695356178,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulothreeclass_y"),
+              },
+              {
+                pitch: -40.6033540593782,
+                yaw: -140.9236987933833,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("livecruloclassone_y"),
+              },
+              {
+                pitch: 3.1255018347509886,
+                yaw: -86.26176637270561,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulotwopoverh_y"),
+              },
             ],
           },
+
+          livecrulotwopoverhoneclass_y: {
+            type: "equirectangular",
+            panorama: "school/livecrulotwopoverhoneclass_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -19.08619143967589,
+                yaw: 68.44842093128477,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulotwopoverh_y"),
+              },
+            ],
+          },
+          twopoverhlivecruloclassywo_y: {
+            type: "equirectangular",
+            panorama: "school/twopoverhlivecruloclassywo_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -19.242456146438716,
+                yaw: 72.3335065320573,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulotwopoverh_y"),
+              },
+            ],
+          },
+          classinformatik_y: {
+            type: "equirectangular",
+            panorama: "school/classinformatik_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -44.04277180485984,
+                yaw: 95.05868124260786,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulotwopoverh_y"),
+              },
+            ],
+          },
+
+          livecrulotwopoverh_y: {
+            type: "equirectangular",
+            panorama: "school/livecrulotwopoverh_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -27.00542742582161,
+                yaw: -104.92887278870545,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecruloonepoverhcoridor_y"),
+              },
+              {
+                pitch: -31.57305774132784,
+                yaw: -65.17127034094031,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulotwopoverhoneclass_y"),
+              },
+              {
+                pitch: -21.31475441164023,
+                yaw: 64.82303162572174,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("twopoverhlivecruloclassywo_y"),
+              },
+              {
+                pitch: -17.199040535658384,
+                yaw: 102.49549892385346,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("classinformatik_y"),
+              },
+              {
+                pitch: -3.7100087094945446,
+                yaw: 174.01220998887158,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("coridortwopoverh_y"),
+              },
+            ],
+          },
+
+          pravecrulotwopovertwoclass_y: {
+            type: "equirectangular",
+            panorama: "school/pravecrulotwopovertwoclass_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -19.771277919352002,
+                yaw: -68.24911740850027,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("coridortwopoverh_y"),
+              },
+            ],
+          },
+
+          coridortwopoverh_y: {
+            type: "equirectangular",
+            panorama: "school/coridortwopoverh_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -30.522319014124413,
+                yaw: 139.6620385478255,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("livecrulotwopoverh_y"),
+              },
+              {
+                pitch: -24.54335308870644,
+                yaw: 101.00200626485562,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("twopoverpravecoridor_y"),
+              },
+              {
+                pitch: -24.512332537677814,
+                yaw: -61.390728753813875,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () =>
+                  viewer.loadScene("pravecrulotwopovertwoclass_y"),
+              },
+            ],
+          },
+
+          pravecrulotwopoveroneclass_y: {
+            type: "equirectangular",
+            panorama: "school/pravecrulotwopoveroneclass_y.jpg",
+
+            hotSpots: [
+              {
+               pitch: -22.30740371473299 , yaw: 67.7453765053641,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("twopoverpravecoridor_y"),
+              },
+            ],
+          },
+
+          twopoverpravecoridor_y: {
+            type: "equirectangular",
+            panorama: "school/twopoverpravecoridor_y.jpg",
+
+            hotSpots: [
+              {
+                pitch: -22.17459972592929,
+                yaw: 102.08514905880166,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("coridortwopoverh_y"),
+              },
+               {
+                pitch: -50.478157510958354 , yaw: 174.62162891844284,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("pravecrulotwopoveroneclass_y"),
+              },
+                             {
+               pitch: -41.404001521141 , yaw: -57.179890040159634,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("pravecrulocorudoronepoverh_y"),
+              },
+            ],
+          },
+
+            classbilyhavkugreendoorpravecrulo_y: {
+            type: "equirectangular",
+            panorama: "school/classbilyhavkugreendoorpravecrulo_y.jpg",
+
+            hotSpots: [
+              {
+              pitch: -31.299224751031268 , yaw: -130.7397908045295,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("pravecrulocorudoronepoverh_y"),
+              },
+            ],
+          },
+
+           pravecrulonepovehtwoclasser_y: {
+            type: "equirectangular",
+            panorama: "school/pravecrulonepovehtwoclasser_y.jpg",
+
+            hotSpots: [
+              {
+             pitch: -24.76193706990616 , yaw: -51.60114025214372,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("pravecrulocorudoronepoverh_y"),
+              },
+            ],
+          },
+
+           havka_y: {
+            type: "equirectangular",
+            panorama: "school/havka_y.jpg",
+
+            hotSpots: [
+              {
+            pitch: -21.582160188374203 , yaw: -172.69589485912437,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("pravecrulocorudoronepoverh_y"),
+              },
+            ],
+          },
+
           pravecrulocorudoronepoverh_y: {
             type: "equirectangular",
             panorama: "school/pravecrulocorudoronepoverh_y.jpg",
@@ -118,15 +440,38 @@
                 cssClass: "ground-arrow",
                 clickHandlerFunc: () => viewer.loadScene("vulucia_y"),
               },
+               {
+                pitch: 4.42684760818824 , yaw: -87.4362080082944,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("twopoverpravecoridor_y"),
+              },
+               {
+                pitch: -45.27025665978673 , yaw: 20.9681663684452,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("classbilyhavkugreendoorpravecrulo_y"),
+              },
+               {
+                pitch: -48.34338564990283 , yaw: 89.1822790641695,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("pravecrulonepovehtwoclasser_y"),
+              },
+              {
+                pitch: -20.54678899896277 , yaw: 154.24309007665192,
+                type: "custom",
+                cssClass: "ground-arrow",
+                clickHandlerFunc: () => viewer.loadScene("havka_y"),
+              },
             ],
           },
         },
       });
-      viewer.on("mousedown", function (e) {
+      /*viewer.on("mousedown", function (e) {
         const coords = viewer.mouseEventToCoords(e);
         console.log("pitch:", coords[0], `,`, "yaw:", coords[1]);
-      });
+      });*/
     </script>
-    
   </body>
 </html>
